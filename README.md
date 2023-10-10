@@ -25,4 +25,7 @@ Add-AppxPackage %userprofile%\Downloads\Microsoft.VCLibs.140.00.UWPDesktop_8weky
 Add-AppxProvisionedPackage -Online -PackagePath %userprofile%\Downloads\Microsoft.DesktopAppInstaller_*.msixbundle -LicensePath %userprofile%\Downloads\*_License1.xml
 # Install winget package source
 Add-AppxPackage %userprofile%\Downloads\Winget_Source.msix
+
+# Install Choco
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
