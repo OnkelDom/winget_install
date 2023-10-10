@@ -2,6 +2,8 @@
 
 On many of my Windows systems is no winget installed and i have spend a lot of time to get them ready for use.
 
+Downlaod the latest Version of die Windows Desktop Installer from https://github.com/microsoft/winget-cli/releases/latest 
+
 Clone this repo and execute the following code in PowerShell as Administrator
 
 ```pwsh
@@ -20,7 +22,7 @@ Install-Module -Name Microsoft.WinGet.Client
 Add-AppxPackage %userprofile%\Downloads\Microsoft.UI.Xaml.2.7_8wekyb3d8bbwe.Appx
 Add-AppxPackage %userprofile%\Downloads\Microsoft.VCLibs.140.00.UWPDesktop_8wekyb3d8bbwe.Appx
 # Install DesktopAppInstaller (winget)
-Add-AppxProvisionedPackage -Online -PackagePath %userprofile%\Downloads\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle -LicensePath %userprofile%\Downloads\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe_License.xml
+Add-AppxProvisionedPackage -Online -PackagePath %userprofile%\Downloads\Microsoft.DesktopAppInstaller_*.msixbundle -LicensePath %userprofile%\Downloads\*_License1.xml
 # Install winget package source
 Add-AppxPackage %userprofile%\Downloads\Winget_Source.msix
 ```
